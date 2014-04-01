@@ -24,6 +24,9 @@ body,td,th {
 body {
 	background-color: rgba(51,51,51,1);
 }
+a {
+	color:rgba(255,255,255,1);	
+}
 .captcha_id {
 	font-size:24px;
 }
