@@ -1,22 +1,25 @@
 <?php
 /*
 *	Proud captcha by Szymon Filipczyk
+*	Easy one file php captcha
 */
 $time_start = microtime(true); 
 
 session_start();
 
 	// http://openfontlibrary.org/en/font/on-the-wall
-	$font = "OnTheWall.ttf";
+	$font = "OnTheWall.ttf";	// If the font does not exist, it will use an alternative mode.
 	
 	// Avitable characters for captcha
 	$characters = "1234567890";
 	
 	// Captcha global varibles
 	$captcha_length = 6;	//6		10
-	$captcha_width = 256;	//128	256
-	$captcha_height = 64;	//32	64
-	$font_size = 30;		//10	30
+	$captcha_width = 128;	//128	256
+	$captcha_height = 32;	//32	64
+	$font_size = 10;		//10	30
+	
+	// Create image
 	$image = imagecreatetruecolor($captcha_width, $captcha_height);
 
 	// Add lines into captcha
